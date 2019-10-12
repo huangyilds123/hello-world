@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+
+body  {
+  background-image: url("https://cdn.pizap.com/pizapfiles/images/photo_backgrounds_textures_app04.jpg");
+  background-color: #cccccc;
+  background-size: auto;
+}
+
+.pstyle1 {
+ font-size:36px;
+ color:Tomato;
+}
+
+.pstyle {
+ font-size:25px;
+ color:black;
+}
+
+.pstyle2 {
+ font-size:40px;  
+}
+
+.pstyle3 {
+ font-size:36px;  
+ color: pink ;
+}
+.hstyle {
+ font-size:36px;
+ color:MediumSeaGreen;
+}
+
+
+</style>
+
+</head>
+
+<body>
+ 
+<title> Fetch API </title>
+
+<br />
+<br />
+<div>
+<center><p class ="hstyle">This website is about 10 Girls information API</p>
+<center><p class ="hstyle">And a Google BOOK API</p>
+
+</div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <body style="background-color:white;">
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="http://3.19.188.50">Girls API</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="book.html">Google BOOK API</a>
+    </li>
+   
+  </ul>
+</nav>
+<center><p class = "hstyle"><a href="https://github.com/huangyilds123/hello-world.git">GitHub repository Link</a></p>
+</div>
+<center><button id = "getText" ; class = "pstyle2" > Get instructions</button>
+ 
+  <center><button id = "getUsers" ; class = "pstyle2"> Get GIRLS</button>
+ 
+ <div id = 'hy' ; class = "pstyle3">Hope you are ready to watch!</div>
+ <div id = 'output' ; class = "pstyle"'></div>
+ <div id = 'info' ; class = "pstyle"'></div>
+  <script>
+  document.getElementById('getText').addEventListener
+  ('click' , getText); 
+   document.getElementById('getUsers').addEventListener
+  ('click' , getUsers); 
+  
+  
+  //console.log(123);
+  /*
+  fetch('sample.txt')
+  .then(function(res){
+   return res.text();
+  })
+  .then(function(data){
+   console.log(data)
+  })
+  */
+   function getText(){
+  fetch('sample.txt')
+  .then(res => res.text())
+  .then((data) => {
+   console.log(data); 
+   document.getElementById('hy').innerHTML = data ;
+  })
+  }
+  
+  
+  
+  function getUsers(){
+      fetch('https://raw.githubusercontent.com/huangyilds123/hello-world/master/db.json')
+      .then((res) => res.json())
+      .then((data) => {
+        let output = '<h2>Dating list Information</h2>';
+        data.forEach(function(user){
+          output += `
+            
+              NAME: ${user.name}
+              <br/>
+              AGE: ${user.age}
+              <br/>
+              NUMBER: ${user.number}
+              <br/>
+              <br/>
+              <br/>
+            
+          `;
+        });
+        document.getElementById('output').innerHTML = output;
+      })
+  } 
+ 
+ </script>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
