@@ -1,18 +1,28 @@
 [
   {
-    "id":1,
-    "name":"Alex",
-    "email":"huangyi@gmail.com"
+    "name":"Emma",
+    "age":22,
+    "number":"801-224-7368"
+  },
+   {
+    "name":"Julie",
+    "age":23,
+    "number":"801-994-3458"
   },
   {
-    "id":2,
-    "name":"Allyn",
-    "email":"ALLyn@gmail.com"
+    "name":"Cynthia",
+    "age":20,
+    "number":"801-546-7389"
   },
-  {
-    "id":3,
-    "name":"Mark",
-    "email":"Mark@gmail.com"
+   {
+    "name":"Anna",
+    "age":19,
+    "number":"701-834-7138"
+  },
+   {
+    "name":"Rachael",
+    "age":18,
+    "number":"626-242-5568"
   }
 ]
 
