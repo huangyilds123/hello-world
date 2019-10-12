@@ -1,1 +1,18 @@
-sadkl;fs
+[
+  {
+    "id":1,
+    "name":"Alex",
+    "email":"huangyi@gmail.com"
+  },
+  {
+    "id":2,
+    "name":"Allyn",
+    "email":"ALLyn@gmail.com"
+  },
+  {
+    "id":3,
+    "name":"Mark",
+    "email":"Mark@gmail.com"
+  }
+]
+
